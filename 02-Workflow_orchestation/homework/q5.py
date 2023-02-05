@@ -4,6 +4,7 @@ from pathlib import Path
 import pandas as pd
 from prefect import task, flow
 from prefect_gcp.cloud_storage import GcsBucket
+from prefect.filesystems import GitHub
 
 @task(retries=3)
 def fetch(dataset_url: str) -> pd.DataFrame:
@@ -32,7 +33,7 @@ def write_local(df: pd.DataFrame, color:str, dataset_file:str) -> Path:
 @task()
 def write_gcs(path: Path) -> None:
     """Upload local parquet file to GCS"""
-    gcs_block = GcsBucket.load("zoom-gcs-2")
+    gcs_block = GitHub.load("zoomcamp-github")
     gcs_block.upload_from_path(from_path=f"{path}", to_path=path)
     return
 

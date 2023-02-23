@@ -7,8 +7,14 @@ sources:
     tables:
       - name: yellow_tripdata
       - name: green_tripdata
+      - name: fhv
 
 models:
+    - name: stg_fhv_tripdata
+      description: >
+        Trips made by For Hire Vehicles. The records were collected and provided to the NYC Taxi Limousine Commision (TLC) by
+        technology service providers.
+      
     - name: stg_green_tripdata
       description: >
         Trip made by green taxis, also known as boro taxis and street-hail liveries.

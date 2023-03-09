@@ -5,3 +5,7 @@ data/
 __pycache__/
 *.so
 *.dylib
+*.tgz
+*.gz
+.ipynb_checkpoints/
+notebook/

@@ -6,6 +6,6 @@ __pycache__/
 *.so
 *.dylib
 *.tgz
-*.gz
+*.csv.gz
 .ipynb_checkpoints/
 notebook/

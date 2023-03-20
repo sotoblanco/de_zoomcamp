@@ -8,3 +8,6 @@ __pycache__/
 .ipynb_checkpoints/
 notebook/
 *.csv
+kafka_env/
+checkpoint/
+*.gz
